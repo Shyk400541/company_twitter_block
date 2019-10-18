@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Implements hook_block_info().
+ */
+function company_twitter_block_block_info() {
+	$blocks['company_twitter_block'] = array(
+	'info' => t('Company twitter block'),
+	'cache' => DRUPAL_NO_CACHE,);
+	return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+ function company_twitter_block_block_view($delta = '') {
+
+ 	$twitter = '<a class="twitter-timeline" href="https://twitter.com/Chiisai73853724/lists/drupal?ref_src=twsrc%5Etfw">A Twitter List by Chiisai73853724</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>';
+ 	$block = array();
+ 	switch ($delta){
+ 	case 'company_twitter_block':
+ 		$block['subject'] = t('Company twitter block');
+ 		$block['content'] = $twitter;
+ 		break;
+ 		}
+ 	drupal_add_js(drupal_get_path('module', 'company_twitter_block') . '/js/company.js');
+ 	return $block;
+ }

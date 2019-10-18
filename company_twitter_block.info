@@ -1,0 +1,5 @@
+name = Company twitter block
+description = This module output as block
+package = custom
+core = 7.x
+version = 1.x
