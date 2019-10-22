@@ -1,1 +1,1 @@
-document.write('If you are looking here that meen script is work' );
+document.write('If you are see this that meen script is work' );
